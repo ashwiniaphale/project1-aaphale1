@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <style>
+        body{
+            background: url("/static/moviebackground.png"); 
+            background-size: cover; 
+        }
+    </style>
+    <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <center>
+        <h1> Register your username! </h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <b> {{message}} </b>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST" action="/register">
+            <input type="text" name="user_form">
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+    </body>
+</html>

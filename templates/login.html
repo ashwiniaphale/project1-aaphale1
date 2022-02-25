@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <style>
+        body{
+            background: url("/static/moviebackground.png"); 
+            background-size: cover; 
+        }
+    </style>
+    <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+    <center>
+        <h1> Login with your username! </h1>
+        <form method="POST" action="/login">
+            <input type="text" name="user_form">
+            <input type="submit" value="Submit"> <br> <br>
+        If you want to register, please click: <a href= "{{url_for('register')}}">Register</a>
+        </form>
+    </center>
+    </body>
+</html>
